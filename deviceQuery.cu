@@ -25,6 +25,7 @@ int main(){
 			printf("Device number:%d is invalid \n", i);
 		}
 		else{
+			char* name = current_device_properties.name;
 			int multiprocessor_count = current_device_properties.multiProcessorCount;
 			size_t shared_mem_per_block = current_device_properties.sharedMemPerBlock;
 			size_t total_global_memory = current_device_properties.totalGlobalMem;
@@ -32,6 +33,9 @@ int main(){
 			int* block_dim_limits = current_device_properties.maxThreadsDim;
 			int* grid_dim_limits = current_device_properties.maxGridSize;
 			printf("Stats for device #%d:\n", i);
+			printf("name: ");
+			printf(name);
+			printf("\n");
 			printf("number of multiprocessors: %d\n", multiprocessor_count);
 			printf("shared memery per block: %d\n", shared_mem_per_block);
 			printf("total global memory: %d\n", total_global_memory);
